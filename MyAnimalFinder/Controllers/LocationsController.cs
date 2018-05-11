@@ -175,28 +175,6 @@ namespace MyAnimalFinder.Controllers
             return res;
         }
 
-        //public Fort GetProductGP(string curLocale)
-        //{           
-        //    int curRow = (curLocale[0] - 'A');
-        //    int curCol = 0;
-        //    double dist = 0.0,
-        //           minDist = double.MaxValue - 1;
-        //    Fort junk, minDistFort = null;
-        //    int.TryParse(curLocale.Substring(1), out curCol);
-        //    Dictionary<double, Fort> distances = new Dictionary<double, Fort>();
-        //    foreach (Fort poss in forts)
-        //    {
-        //        dist = Math.Sqrt(Math.Pow((poss.row - curRow), 2) + Math.Pow((poss.col - curCol), 2));
-        //        if (dist < minDist)
-        //        {
-        //            minDist = dist;
-        //            minDistFort = poss;
-        //        }
-        //        if (!distances.TryGetValue(dist, out junk))
-        //            distances.Add(dist, poss);
-        //    }
-            
-        //    return minDistFort;
-        //}
+        
     }
 }

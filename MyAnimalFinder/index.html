@@ -49,7 +49,7 @@
     <div class="main">
         <h2>&ensp;Search for Gunpowder</h2> <!--&nbsp; 1space, &ensp; 2spaces-->
         <h4>Please input your coordinate location</h4>
-        <input type="text" id="locationSquaregp" size="25" placeholder="Location - Ex. B15" />       
+        <input type="text" id="locationGp" size="25" placeholder="Location - Ex. B15" />       
         <input type="button" value="Search" onclick="findgp();" /><br />
         <ul id="resultFort" /><br />
     </div>
@@ -58,17 +58,17 @@
         <script>
             var uri = 'api/locations';
 
-            //$(document).ready(function () {
-            //    // Send an AJAX request
-            //    $.getJSON(uri)
-            //        .done(function (data) {
+            $(document).ready(function () {
+                // Send an AJAX request
+                $.getJSON(uri)
+                    .done(function (data) {
             //            // On success, 'data' contains a list of products.
             //            //$.each(data, function (key, item) {
             //            //  // Add a list item for the product.
             //            //  $('<li>', { text: formatItem(item) }).appendTo($('#locations'));
             //            //});
-            //        });
-            //});
+                    });
+            });
 
             function formatItem(item) {
                 return item.name + ' - ' + item.fullRowCol;
@@ -96,7 +96,7 @@
             }
 
             function findgp() {               
-                var location = $('#locationSquaregp').val();
+                var location = $('#locationGp').val();
                 $.getJSON(uri + '?curLocale=' + location)
                     .done(function (data) {                        
                         $('#resultFort').text(formatItem(data));
