@@ -4,12 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Diagnostics; //debug.writeline()
-
-using MyAnimalFinder.Models;
-namespace MyAnimalFinder.Controllers
+using TheFinder.Models;
+namespace TheFinder.Controllers
 {
-    public class locationsController : ApiController
+    public class LocationsController : ApiController
     {
         class AnimalFactory
         {
@@ -26,7 +24,7 @@ namespace MyAnimalFinder.Controllers
                 return null;//return null object if unsupported animal
             }
         }
-        public Fort[] forts = new Fort[] 
+        public Fort[] forts = new Fort[]
         {
             new Fort('K',9, "Hidden Spring Keep"), new Fort('C',7, "Keel Haul Fort"),
             new Fort('O',6,"Kraken Watchtower"), new Fort('J',21,"Lost Gold Fort"),
@@ -106,12 +104,15 @@ namespace MyAnimalFinder.Controllers
             List<int> choices = new List<int>(ids.Length);
             List<Location> possibilities = new List<Location>();
             int parseVal = 0;
-            foreach (string cmd in ids) {
+            foreach (string cmd in ids)
+            {
                 int.TryParse(cmd, out parseVal);
                 choices.Add(parseVal);
             }
-            foreach (Location isle in locations) {
-                switch (ids.Length) {
+            foreach (Location isle in locations)
+            {
+                switch (ids.Length)
+                {
                     case 1:
                         if (isle.HasAnimal(AnimalFactory.getAnimal(choices[0])))
                             possibilities.Add(isle);
@@ -131,33 +132,35 @@ namespace MyAnimalFinder.Controllers
                 newUserLocation = ((char)(userLocation[0] - 'a' + 'A')).ToString()
                                 + userLocation.Substring(1); //handle lowerCase
             else newUserLocation = userLocation;
-           // Debug.WriteLine("\n\n\nuserLocation: " + newUserLocation + "\n\n");
+            // Debug.WriteLine("\n\n\nuserLocation: " + newUserLocation + "\n\n");
             //WriteLine("You are here: " + userLocation);
             int curRow = (userLocation[0] - 'A');
             int curCol = 0;
             double dist = 0.0,
-                   minDist = double.MaxValue-1;
+                   minDist = double.MaxValue - 1;
             Location junk;
             int.TryParse(userLocation.Substring(1), out curCol);
             Dictionary<double, Location> distances = new Dictionary<double, Location>();
-            foreach (Location poss in possibilities) {
-                dist = Math.Sqrt(Math.Pow((poss.row - curRow), 2) + Math.Pow((poss.col - curCol), 2));               
+            foreach (Location poss in possibilities)
+            {
+                dist = Math.Sqrt(Math.Pow((poss.row - curRow), 2) + Math.Pow((poss.col - curCol), 2));
                 if (dist < minDist)
                     minDist = dist;
-                if(!distances.TryGetValue(dist, out junk))
+                if (!distances.TryGetValue(dist, out junk))
                     distances.Add(dist, poss);
             }
             //Console.WriteLine("minDistance: " + minDist);            
             if (distances.TryGetValue(minDist, out junk))
-                return junk;            
+                return junk;
             else
                 return null;
 
         }
-        public IEnumerable<Location> GetAllLocations(){
+        public IEnumerable<Location> GetAllLocations()
+        {
             return locations;
         }
-        public Location GetProduct(string mashedArg)
+        public IHttpActionResult GetProduct(string mashedArg)
         {
             string[] unmashed = mashedArg.Split('|');
             string test = unmashed[0];
@@ -166,14 +169,16 @@ namespace MyAnimalFinder.Controllers
             List<int> ids = new List<int>(idStrings.Length);
             //List<Location> possibilities = new List<Location>();
             int idInt = 0;
-            foreach(string id in idStrings)
+            foreach (string id in idStrings)
             {
                 int.TryParse(id, out idInt);
                 ids.Add(idInt);
             }
             Location res = HasAnimals(test, location);        //locations.Where(l => 
-            return res;
-        }       
+            if (res == null)
+                return NotFound();
+            return Ok(res);
+        }
 
         //return res.name + ' ' + '-' + ' ' + res.fullRowCol;
         //if (locResult == null)
@@ -182,6 +187,6 @@ namespace MyAnimalFinder.Controllers
         //}
         //// string res = (locResult.name + " - " + locResult.fullRowCol);
         //return Ok(locResult);
-        //return (locResult.name + " - " + locResult.fullRowCol);       
+        //return (locResult.name + " - " + locResult.fullRowCol);      
     }
 }

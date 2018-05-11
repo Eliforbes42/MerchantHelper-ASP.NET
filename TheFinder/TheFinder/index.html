@@ -11,24 +11,25 @@
     <!---->
 </head>
 
-<body> 
+<body>
     <div class="sidebar">
         <ul>
             <li><a href="https://eliforbes42.github.io/MerchantHelper/MyAnimalFinder/">Home</a></li>
         </ul>
-    </div>  
-    
+    </div>
+
     <div class="main">
-        <a href="https://eliforbes42.github.io/MerchantHelper/MyAnimalFinder/"><img 
-            src="https://i.imgur.com/y9xxyZA.png" alt="Animal Finder" 
-            style="width: 25%; height: 25%; justify-content: center; padding: 10px 0px 0px 10px;" /></a>
+        <a href="https://eliforbes42.github.io/MerchantHelper/MyAnimalFinder/">
+            <img src="https://i.imgur.com/y9xxyZA.png" alt="Animal Finder"
+                 style="width: 25%; height: 25%; justify-content: center; padding: 10px 0px 0px 10px;" />
+        </a>
         <!--<ul id="locations" />-->
         <br />
         <div class="about">
             <h2>About</h2>
             <p>This currently supports searching for 1-2 animals at once</p>
         </div>
-        
+
         <h2>&ensp;Search for Animals</h2> <!--&nbsp; 1space, &ensp; 2spaces-->
         <p>&nbsp;&emsp;Animal Id's</p> <!--4spaces-->
         <ul>
@@ -43,19 +44,19 @@
         <input type="button" value="Search" onclick="find();" /><br />
         <ul id="resultIsland" />
     </div>
-    
+
     <div class="separator"></div>
 
     <div class="main">
         <h2>&ensp;Search for Gunpowder</h2> <!--&nbsp; 1space, &ensp; 2spaces-->
         <h4>Please input your coordinate location</h4>
-        <input type="text" id="locationGp" size="25" placeholder="Location - Ex. B15" />       
+        <input type="text" id="locationGp" size="25" placeholder="Location - Ex. B15" />
         <input type="button" value="Search" onclick="findgp();" /><br />
         <ul id="resultFort" /><br />
     </div>
 
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-        <script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
             var uri = 'api/locations';
 
             $(document).ready(function () {
@@ -95,16 +96,16 @@
                     });
             }
 
-            //function findgp() {               
+            //function findgp() {
             //    var location = $('#locationGp').val();
             //    $.getJSON(uri + '?curLocale=' + location)
-            //        .done(function (data) {                        
+            //        .done(function (data) {
             //            $('#resultFort').text(formatItem(data));
             //        })
             //        .fail(function (jqXHR, textStatus, err) {
             //            $('#resultFort').text('Error: ' + err + ids);
             //        });
             //}
-        </script>
+    </script>
 </body>
 </html>

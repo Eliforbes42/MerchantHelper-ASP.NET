@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using MyAnimalFinder.Controllers;
 
-namespace MyAnimalFinder.Models
+namespace TheFinder.Models
 {
     public class Animal
     {
@@ -26,7 +25,7 @@ namespace MyAnimalFinder.Models
     {
         public Snek(string newName = "Snek") : base(newName) { }
     }
-    
+
     public class Location
     {
         public int row { get; set; }
@@ -72,11 +71,21 @@ namespace MyAnimalFinder.Models
             return false; //unsupported animal
         }
     }
-    public class Fort : Location
+    public class Fort
     {
-        public Fort(char nRow, int nCol, string nName, List<Animal> nullAnimals = null)
-            : base(nRow, nCol, nName, nullAnimals)
-        { }
-    }
+        public int row { get; set; }
+        public int col { get; set; }      
+        public char rowChar { get; set; }
+        public string fullRowCol { get; set; }
+        public string name { get; set; }       
 
+        public Fort(char nRow, int nCol, string nName)
+        {
+            rowChar = nRow;
+            row = (int)(rowChar - 'A');
+            col = nCol;
+            name = nName;
+            fullRowCol = (rowChar.ToString() + col.ToString());           
+        }
+    }
 }
