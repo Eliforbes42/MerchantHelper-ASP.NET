@@ -41,7 +41,6 @@
 .sidebar a:hover {
     color: aquamarine;
 }
-
 .main {
     margin-left: 100px; /*Same as Sidebar Width*/
     padding: 0px 0px 0px 5px; /*10px left padding*/
