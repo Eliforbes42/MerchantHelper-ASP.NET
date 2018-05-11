@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>My Animal Finder</title>
+    <link rel="stylesheet" type="text/css" href="./AnimalFinderStyleSheet.css" />
+</head>
+
+<body>
+
+    <div>
+        <h2>Merchant Alliance Animal Finder</h2>
+        <ul id="locations" />
+    </div>
+    <div>
+        <h2>Search by Animal ID's</h2>
+        <ul>
+            <li>1. Chicken</li>
+            <li>2. Pig</li>
+            <li>3. Snek</li>
+        </ul>
+        <h4>Please input a coordinate location, and a comma-separated list of animal id's</h4>
+        <br />
+        <input type="text" id="locationSquare" size="25" placeholder="Location - Ex. B15" />
+        <input type="text" id="animalIds" size="10" placeholder="Id's - Ex. 1,2" />
+        <input type="button" value="Search" onclick="find();" />
+        <ul id="resultIsland" />
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+    var uri = 'api/locations';
+
+    $(document).ready(function () {
+      // Send an AJAX request
+      $.getJSON(uri)
+          .done(function (data) {
+            // On success, 'data' contains a list of products.
+            //$.each(data, function (key, item) {
+            //  // Add a list item for the product.
+            //  $('<li>', { text: formatItem(item) }).appendTo($('#locations'));
+            //});
+          });
+    });
+
+    function formatItem(item) {
+        return item.name + ' - ' + item.fullRowCol;
+    }
+
+    function find() {
+        var ids = $('#animalIds').val();
+        var location = $('#locationSquare').val();
+        var mashedArg = (ids.toString()+"|"+location.toString());
+      $.getJSON(uri + '?mashedArg=' + mashedArg)
+          .done(function (data) {
+              //$.each(data, function (key, item) {
+              //  // Add a list item for the product.
+              //    $('<li>', { text: formatItem(item) }).appendTo($('#resultIsland'));
+              //    //$('#resultIsland').text(formatItem(item)); //
+              //});
+
+             //$('#resultIsland').text(formatItem(data)); //
+               $('<li>', { text: formatItem(data) }).appendTo($('#resultIsland'));
+          })
+          .fail(function (jqXHR, textStatus, err) {
+            $('#resultIsland').text('Error: ' + err+ids);
+          });
+    }
+    </script>
+</body>
+</html>
