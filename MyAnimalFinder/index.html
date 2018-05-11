@@ -95,20 +95,10 @@
                     });
             }
 
-            function findgp() {
-                
+            function findgp() {               
                 var location = $('#locationSquaregp').val();
-                
                 $.getJSON(uri + '?curLocale=' + location)
-                    .done(function (data) {
-                        //$.each(data, function (key, item) {
-                        //  // Add a list item for the product.
-                        //    $('<li>', { text: formatItem(item) }).appendTo($('#resultIsland'));
-                        //    //$('#resultIsland').text(formatItem(item)); //
-                        //});
-
-                        //$('#resultIsland').text(formatItem(data)); //
-                        //$('<li>', { text: formatItem(data) }).appendTo($('#resultIsland'));
+                    .done(function (data) {                        
                         $('#resultFort').text(formatItem(data));
                     })
                     .fail(function (jqXHR, textStatus, err) {
