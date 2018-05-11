@@ -36,7 +36,7 @@
 }
 
 .sidebar a {
-    color: #fff;
+    color: #ffffff;
 }
 .sidebar a:hover {
     color: aquamarine;
@@ -45,7 +45,6 @@
 .main {
     margin-left: 100px; /*Same as Sidebar Width*/
     padding: 0px 0px 0px 5px; /*10px left padding*/
-
 }
 .main .submain {
     margin-left: 150px;
@@ -72,7 +71,6 @@ input[type=text] {
 input[type=text]:hover {
     background-color: aqua;
 }
-
 input[type=button] {
     background-color: #000;
     color: white;
