@@ -160,7 +160,7 @@ namespace TheFinder.Controllers
         {
             return locations;
         }
-        public IHttpActionResult GetProduct(string mashedArg)
+        public string GetProduct(string mashedArg)
         {
             string[] unmashed = mashedArg.Split('|');
             string test = unmashed[0];
@@ -175,9 +175,10 @@ namespace TheFinder.Controllers
                 ids.Add(idInt);
             }
             Location res = HasAnimals(test, location);        //locations.Where(l => 
-            if (res == null)
-                return NotFound();
-            return Ok(res);
+            //if (res == null)
+            //    return NotFound();
+            //return Ok(res);
+            return (res.name + " - " + res.fullRowCol);
         }
 
         //return res.name + ' ' + '-' + ' ' + res.fullRowCol;

@@ -89,7 +89,7 @@
 
                         //$('#resultIsland').text(formatItem(data)); //
                         //$('<li>', { text: formatItem(data) }).appendTo($('#resultIsland'));
-                        $('#resultIsland').text(formatItem(data));
+                        $('#resultIsland').text(data);
                     })
                     .fail(function (jqXHR, textStatus, err) {
                         $('#resultIsland').text('Error: ' + err + ids);
