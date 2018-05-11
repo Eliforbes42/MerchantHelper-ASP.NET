@@ -50,7 +50,7 @@
         var ids = $('#animalIds').val();
         var location = $('#locationSquare').val();
         var mashedArg = (ids.toString()+"|"+location.toString());
-      $.getJSON(uri + '?mashedArg=' + mashedArg)
+      $.getJSON(uri + '/?mashedArg=' + mashedArg)
           .done(function (data) {
               //$.each(data, function (key, item) {
               //  // Add a list item for the product.
@@ -58,8 +58,8 @@
               //    //$('#resultIsland').text(formatItem(item)); //
               //});
 
-             //$('#resultIsland').text(formatItem(data)); //
-               $('<li>', { text: formatItem(data) }).appendTo($('#resultIsland'));
+             $('#resultIsland').text(formatItem(data)); //
+               //$('<li>', { text: formatItem(data) }).appendTo($('#resultIsland'));
           })
           .fail(function (jqXHR, textStatus, err) {
             $('#resultIsland').text('Error: ' + err+ids);
