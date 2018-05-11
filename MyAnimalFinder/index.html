@@ -95,16 +95,16 @@
                     });
             }
 
-            function findgp() {               
-                var location = $('#locationGp').val();
-                $.getJSON(uri + '?curLocale=' + location)
-                    .done(function (data) {                        
-                        $('#resultFort').text(formatItem(data));
-                    })
-                    .fail(function (jqXHR, textStatus, err) {
-                        $('#resultFort').text('Error: ' + err + ids);
-                    });
-            }
+            //function findgp() {               
+            //    var location = $('#locationGp').val();
+            //    $.getJSON(uri + '?curLocale=' + location)
+            //        .done(function (data) {                        
+            //            $('#resultFort').text(formatItem(data));
+            //        })
+            //        .fail(function (jqXHR, textStatus, err) {
+            //            $('#resultFort').text('Error: ' + err + ids);
+            //        });
+            //}
         </script>
 </body>
 </html>
