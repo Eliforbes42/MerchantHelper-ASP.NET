@@ -173,15 +173,8 @@ namespace MyAnimalFinder.Controllers
             }
             Location res = HasAnimals(test, location);        //locations.Where(l => 
             return res;
-        }       
+        }
 
-        //return res.name + ' ' + '-' + ' ' + res.fullRowCol;
-        //if (locResult == null)
-        //{
-        //    return NotFound();
-        //}
-        //// string res = (locResult.name + " - " + locResult.fullRowCol);
-        //return Ok(locResult);
-        //return (locResult.name + " - " + locResult.fullRowCol);       
+        
     }
 }
