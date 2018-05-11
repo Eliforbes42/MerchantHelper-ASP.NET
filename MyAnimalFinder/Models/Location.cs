@@ -26,6 +26,7 @@ namespace MyAnimalFinder.Models
     {
         public Snek(string newName = "Snek") : base(newName) { }
     }
+    
     public class Location
     {
         public int row { get; set; }
@@ -71,6 +72,11 @@ namespace MyAnimalFinder.Models
             return false; //unsupported animal
         }
     }
-    
+    public class Fort : Location
+    {
+        public Fort(char nRow, int nCol, string nName, List<Animal> nullAnimals = null)
+            : base(nRow, nCol, nName, nullAnimals)
+        { }
+    }
 
 }

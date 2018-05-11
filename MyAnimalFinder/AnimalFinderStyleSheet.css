@@ -1,14 +1,102 @@
-﻿header {
-  height: 60px;
-  text-align: center;
+﻿#resultIsland, .main #resultFort {
+  width: 247px;
+  height: 37px;
+  border-radius: 3.2px;
+  border: solid 1px #1f233e;
+  background-color: #525252;
+  display: inline-block;
+  margin: auto;
+  padding-top: 15px;
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #ffffff;
+}
+.separator {
+    margin-left: 12px;
+    background-color: black;
+    color: #fff;
+    display: block;
+    border: 2px solid black;
+    margin-top: 6px; /*Give some space*/
 }
 
-main {
+.sidebar {
+    height: 100%; /*Full Height*/
+    width: 100px; /*Sidebar Width*/
+    position: fixed; /*Stay fixed on scroll*/
+    z-index: 1; /*Stay on top*/
+    top: 0; /*Stay on top*/
+    left: 0;
+    background-color: #252525;
+    border: solid 1px #1f233e;
+    overflow-x: hidden; /*No horizontal scroll*/
+    padding-top: 10px; /*Give some space*/
+}
+
+.sidebar a {
+    color: #ffffff;
+}
+.sidebar a:hover {
+    color: aquamarine;
+}
+.main {
+    margin-left: 100px; /*Same as Sidebar Width*/
+    padding: 0px 0px 0px 5px; /*10px left padding*/
+}
+.main .submain {
+    margin-left: 150px;
+    padding-left: 150px;
+    display: inline-block;
+}
+.about {
+    margin-left: 12px;
+    background-color: #252525;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+input[type=text] {
+    background-color: aquamarine; /*#7fffd4*/
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 37px;    
+}
+input[type=text]:hover {
+    background-color: aqua;
+}
+input[type=button] {
+    background-color: #000;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 41px;
+    margin-bottom: 5px;
+}
+input[type=button]:hover {
+    background-color: #333;
+    color: aquamarine;
+}
+input[type=button]:active {
+    background-color: #777;
+    color: #FFF;
+    border: 1px solid black;
+}
+/*Original Css*/
+/*main {
   background-color: #0087de;
   height: 900px;
   text-align: center;
 }
-
+div,body{
+    background-color: black;
+    color: white;
+}
 h2 {
   height: 38px;
   font-family: Roboto;
@@ -17,19 +105,29 @@ h2 {
   color: #000;
   padding-top: 10px;
   background-color: aquamarine;
-  border: 3px solid black;
+  border: 3px solid white;
   border-radius: 5px;
   display: inline-block;
 
 }
 h4{
+  color: #000;
   padding: 3px 3px;
-  border: 2px solid black;
+  border: 2px solid white;
   background-color: aquamarine;
   border-radius: 3px;
   display: inline-block;
 }
-
+ul{
+  border: 2px solid white;
+  color: black;
+  background-color: aquamarine;
+  border-radius: 3px;  
+  display: inline-block;
+}
+p{
+    color: #fff;
+}
 .logo {
   width: 110px;
   height: 28px;
@@ -58,36 +156,6 @@ h4{
   color: #ffffff;
 }
 
-#shorten {
-  width: 91px;
-  height: 37px;
-  border-radius: 3.2px;
-  border: solid 0.8px #1f233e;
-  background-color: inherit;
-  margin-top: 48px;
-  font-family: Source Sans Pro;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  text-align: center;
-  color: #ffffff;
-  margin-right: -3px;
-}
-
-#expand {
-  width: 91px;
-  height: 37px;
-  border-radius: 3.2px;
-  background-color: #1f233e;
-  border: solid 0.8px #4a4a4a;
-  margin-top: 48px;
-  font-family: Source Sans Pro;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  text-align: center;
-  color: #ffffff;
-  margin-left: -3px;
-}
-
 #responseField {
   min-width: 191px;
   min-height: 120px;
@@ -104,4 +172,4 @@ h4{
 
 #locations {
     border: 2px solid black;
-}
+}*/
