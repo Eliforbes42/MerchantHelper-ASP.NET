@@ -106,15 +106,12 @@ namespace MyAnimalFinder.Controllers
             List<int> choices = new List<int>(ids.Length);
             List<Location> possibilities = new List<Location>();
             int parseVal = 0;
-            foreach (string cmd in ids)
-            {
+            foreach (string cmd in ids) {
                 int.TryParse(cmd, out parseVal);
                 choices.Add(parseVal);
             }
-            foreach (Location isle in locations)
-            {
-                switch (ids.Length)
-                {
+            foreach (Location isle in locations) {
+                switch (ids.Length) {
                     case 1:
                         if (isle.HasAnimal(AnimalFactory.getAnimal(choices[0])))
                             possibilities.Add(isle);
@@ -143,28 +140,21 @@ namespace MyAnimalFinder.Controllers
             Location junk;
             int.TryParse(userLocation.Substring(1), out curCol);
             Dictionary<double, Location> distances = new Dictionary<double, Location>();
-            foreach (Location poss in possibilities)
-            {
+            foreach (Location poss in possibilities) {
                 dist = Math.Sqrt(Math.Pow((poss.row - curRow), 2) + Math.Pow((poss.col - curCol), 2));               
                 if (dist < minDist)
                     minDist = dist;
                 if(!distances.TryGetValue(dist, out junk))
                     distances.Add(dist, poss);
             }
-            //WriteLine("You should go to: "
-            //    + distances[minDist].fullRowCol
-            //    + " - "
-            //    + distances[minDist].name);
-            Console.WriteLine("minDistance: " + minDist);
-            
+            //Console.WriteLine("minDistance: " + minDist);            
             if (distances.TryGetValue(minDist, out junk))
                 return junk;            
             else
                 return null;
 
         }
-        public IEnumerable<Location> GetAllLocations()
-        {
+        public IEnumerable<Location> GetAllLocations(){
             return locations;
         }
         public Location GetProduct(string mashedArg)
