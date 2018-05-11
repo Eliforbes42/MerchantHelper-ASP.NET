@@ -26,6 +26,14 @@ namespace MyAnimalFinder.Controllers
                 return null;//return null object if unsupported animal
             }
         }
+        public Fort[] forts = new Fort[] 
+        {
+            new Fort('K',9, "Hidden Spring Keep"), new Fort('C',7, "Keel Haul Fort"),
+            new Fort('O',6,"Kraken Watchtower"), new Fort('J',21,"Lost Gold Fort"),
+            new Fort('P',17,"Old Boot Fort"), new Fort('U',5,"Shark Fin Camp"),
+            new Fort('E',17,"Sailor's Knot Stronghold"), new Fort('U',11,"Skull Keep"),
+            new Fort('S',22,"The Crow's Nest Fortress")
+        };
         public Location[] locations = new Location[]
         {
              new Location('T', 19, "Barnacle Cay", new List<Animal>() { new Chicken() }),
@@ -122,7 +130,7 @@ namespace MyAnimalFinder.Controllers
             }
             //return false;
             string newUserLocation;
-            if ('a' <= userLocation[0] || userLocation[0] <= 'z')
+            if ('a' <= userLocation[0] && userLocation[0] <= 'z')
                 newUserLocation = ((char)(userLocation[0] - 'a' + 'A')).ToString()
                                 + userLocation.Substring(1); //handle lowerCase
             else newUserLocation = userLocation;
@@ -175,17 +183,30 @@ namespace MyAnimalFinder.Controllers
             }
             Location res = HasAnimals(test, location);        //locations.Where(l => 
             return res;
+        }
 
-
-
-            //return res.name + ' ' + '-' + ' ' + res.fullRowCol;
-            //if (locResult == null)
-            //{
-            //    return NotFound();
-            //}
-            //// string res = (locResult.name + " - " + locResult.fullRowCol);
-            //return Ok(locResult);
-            //return (locResult.name + " - " + locResult.fullRowCol);
+        public Fort GetProductGP(string curLocale)
+        {           
+            int curRow = (curLocale[0] - 'A');
+            int curCol = 0;
+            double dist = 0.0,
+                   minDist = double.MaxValue - 1;
+            Fort junk, minDistFort = null;
+            int.TryParse(curLocale.Substring(1), out curCol);
+            Dictionary<double, Fort> distances = new Dictionary<double, Fort>();
+            foreach (Fort poss in forts)
+            {
+                dist = Math.Sqrt(Math.Pow((poss.row - curRow), 2) + Math.Pow((poss.col - curCol), 2));
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    minDistFort = poss;
+                }
+                if (!distances.TryGetValue(dist, out junk))
+                    distances.Add(dist, poss);
+            }
+            
+            return minDistFort;
         }
     }
 }
