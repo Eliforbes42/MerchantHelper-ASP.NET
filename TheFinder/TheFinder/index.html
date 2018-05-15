@@ -79,7 +79,7 @@
                 var ids = $('#animalIds').val();
                 var location = $('#locationSquare').val();
                 var mashedArg = (ids.toString() + "|" + location.toString());
-                $.getJSON(uri + '?mashedArg=' + mashedArg)
+                $.getJSON(uri + '/' + mashedArg )
                     .done(function (data) {
                         //$.each(data, function (key, item) {
                         //  // Add a list item for the product.
@@ -96,16 +96,16 @@
                     });
             }
 
-            //function findgp() {
-            //    var location = $('#locationGp').val();
-            //    $.getJSON(uri + '?curLocale=' + location)
-            //        .done(function (data) {
-            //            $('#resultFort').text(formatItem(data));
-            //        })
-            //        .fail(function (jqXHR, textStatus, err) {
-            //            $('#resultFort').text('Error: ' + err + ids);
-            //        });
-            //}
+            function findgp() {
+                var location = $('#locationGp').val();
+                $.getJSON(uri + '/' + location + '/gp')
+                    .done(function (data) {
+                        $('#resultFort').text(data);
+                    })
+                    .fail(function (jqXHR, textStatus, err) {
+                        $('#resultFort').text('Error: ' + err + ids);
+                    });
+            }
     </script>
 </body>
 </html>
