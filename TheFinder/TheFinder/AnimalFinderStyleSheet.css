@@ -33,7 +33,7 @@
     border: solid 1px #1f233e;
     overflow-x: hidden; /*No horizontal scroll*/
     padding-top: 10px; /*Give some space*/
-    padding-right: 25px; margin-right: 30px;
+    
 }
 
 .sidebar a {
