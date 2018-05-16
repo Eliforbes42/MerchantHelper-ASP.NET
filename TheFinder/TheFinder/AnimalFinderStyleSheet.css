@@ -24,7 +24,7 @@
 
 .sidebar {
     height: 100%; /*Full Height*/
-    width: 100px; /*Sidebar Width*/
+    width: 160px; /*Sidebar Width*/
     position: fixed; /*Stay fixed on scroll*/
     z-index: 1; /*Stay on top*/
     top: 0; /*Stay on top*/
@@ -33,23 +33,21 @@
     border: solid 1px #1f233e;
     overflow-x: hidden; /*No horizontal scroll*/
     padding-top: 10px; /*Give some space*/
+    padding-right: 25px; margin-right: 30px;
 }
 
 .sidebar a {
-    color: #ffffff;
+    color: #ffffff;    
 }
 .sidebar a:hover {
     color: aquamarine;
 }
 .main {
-    margin-left: 100px; /*Same as Sidebar Width*/
-    padding: 0px 0px 0px 5px; /*10px left padding*/
+    margin-left: 180px; /*Same as Sidebar Width*/
+    padding-left: 50px;
+    
 }
-.main .submain {
-    margin-left: 150px;
-    padding-left: 150px;
-    display: inline-block;
-}
+
 .about {
     margin-left: 12px;
     background-color: #252525;
