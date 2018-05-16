@@ -24,7 +24,7 @@
 
 .sidebar {
     height: 100%; /*Full Height*/
-    width: 160px; /*Sidebar Width*/
+    width: 120px; /*Sidebar Width*/
     position: fixed; /*Stay fixed on scroll*/
     z-index: 1; /*Stay on top*/
     top: 0; /*Stay on top*/
