@@ -80,3 +80,44 @@ C:\Users\Eli\Desktop\animalFinder\animalFinder\TheFinder\TheFinder\bin\System.We
 C:\Users\Eli\Desktop\animalFinder\animalFinder\TheFinder\TheFinder\obj\Debug\TheFinder.csprojResolveAssemblyReference.cache
 C:\Users\Eli\Desktop\animalFinder\animalFinder\TheFinder\TheFinder\obj\Debug\TheFinder.dll
 C:\Users\Eli\Desktop\animalFinder\animalFinder\TheFinder\TheFinder\obj\Debug\TheFinder.pdb
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\ApplicationInsights.config
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\csc.exe
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\vbc.exe
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\VBCSCompiler.exe
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\TheFinder.dll.config
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\TheFinder.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\TheFinder.pdb
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.Web.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Newtonsoft.Json.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\System.Net.Http.Formatting.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\System.Web.Http.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\System.Web.Http.WebHost.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.Web.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\Newtonsoft.Json.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\System.Net.Http.Formatting.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\System.Web.Http.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\bin\System.Web.Http.WebHost.xml
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\obj\Debug\TheFinder.csprojResolveAssemblyReference.cache
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\obj\Debug\TheFinder.dll
+C:\Users\Eli\Desktop\MyStuff\Animal Finder Stuff\animalFinder\animalFinder\TheFinder\TheFinder\obj\Debug\TheFinder.pdb
